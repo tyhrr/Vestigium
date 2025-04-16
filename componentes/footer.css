@@ -1,0 +1,128 @@
+/* Estilos del footer */
+.footer {
+    background-color: #f8f8f8;
+    backdrop-filter: none;
+    border-radius: 0;
+    color: var(--color-text);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.footer-info {
+    color: #ffffff;
+    flex: 1;
+    min-width: 300px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.social-icon {
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-5px);
+}
+
+.social-icon i {
+    color: var(--color-primary);
+    font-size: 20px;
+}
+
+.social-icon:hover i {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+p.p-footer {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #393939;
+    text-align: center;
+    margin: 2rem;
+}
+
+/* Designed By */ 
+.button {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    cursor: pointer;
+  }
+  
+  .button span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: #272727;
+    border-radius: 9px;
+    transition: 0.5s;
+  }
+  
+  .button:hover::before {
+    opacity: 0.7;
+  }
+  
+  .button::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    border-radius: 9px;
+    transition: 0.5s;
+    opacity: 0;
+    filter: blur(20px);
+  }
+  
+  .button:hover:after {
+    opacity: 1;
+  }
+  

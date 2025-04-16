@@ -1,0 +1,683 @@
+/* Variables de color y tipografía */
+:root {
+    /* Paleta de colores principal */
+    --color-primary: rgba(50, 145, 50, 0.9);
+    --color-primary-dark: rgb(40, 120, 40);
+    --color-secondary: rgba(255, 255, 255, 0.8);
+    --color-text: #2a2929;
+    --color-text-enfasis: #88c05b;
+    --color-text-dark: #383737;
+    --color-text-light:rgba(255, 255, 255, 0.645);
+    
+    /* Fondos y transparencias */
+    --bg-transparent: rgba(0, 0, 0, 0.5);
+    --bg-container: rgba(255, 255, 255, 0.95);
+    
+    /* Tipografía */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: Arial, sans-serif;
+    
+    /* Tamaños de fuente */
+    --font-size-h1: 1.5rem;
+    --font-size-h2: 1.7rem;
+    --font-size-h3: 1.2rem;
+    --font-size-p: 1.3rem;
+    --font-size-p2: 2rem;
+    
+    /* Nuevas variables */
+    --section-padding: 4rem 0;
+    --border-radius-large: 0px;
+
+    /* Variables del selector de idioma */
+    --li4-color-bg-light-hsl: 0, 0%, 98%;
+    --li4-space-3xs: 4px;
+    --li4-space-sm: 8px;
+    --li4-color-contrast-high-hsl: 0, 0%, 20%;
+    --li4-color-primary-hsl: 120, 50%, 50%;
+    --li4-color-white-hsl: 0, 0%, 100%;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globales */
+body {
+    font-family: var(--font-primary);
+    background-color: #f4f4f4;
+}
+
+p {
+    text-align: start;
+    font-size: var(--font-size-p);
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    text-align:center;
+    margin: 2rem;
+}
+
+
+/* Estilos del header */
+header {
+    height: 700px;
+    background-size: cover; /* Ajusta la imagen para que cubra todo el área del header */
+    background-position: top; /* Centra la imagen en el header */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 50px; /* Espacio alrededor del contenido, ajusta según necesites */
+    color: white; /* Cambia el color del texto a blanco para mayor contraste */
+    text-align: center;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+}
+
+.h1-main {
+    margin-top: 8rem;
+    text-align: left;
+    font-size: var(--font-size-h1);
+    color:#303030;
+    font-family: var(--font-primary);
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-shadow: #535252 3px 3px 3px;
+}
+
+.h1-main2 {
+    text-align: left;
+    font-size: var(--font-size-h1);
+    color: var(--color-text-enfasis);
+    font-family: var(--font-primary);
+    font-size: 7rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),  /* sombra principal */
+    0 0 10px rgba(50, 145, 50, 0.5);  /* resplandor verde suave */
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);  /* contorno sutil */
+    text-shadow: #535252 3px 3px 3px;
+}
+
+.sub-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    margin-top: 20px;
+    color: white;
+    background: linear-gradient(135deg, rgba(152, 202, 152, 0.9), rgba(31, 157, 31, 0.7));
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px 20px 20px 20px;
+    margin: 20px 20px 20px 20px;
+}
+
+h2.sub-header {
+    font-size: 1.7rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+}
+
+/* Estilos Index Galeria */
+
+.adv-gallery {
+    position: relative;
+    z-index: 1;
+  }
+
+  
+  .adv-gallery__grid {
+    display: grid;
+    gap: 2rem;
+    width: calc(100% - 3rem);
+    max-width: 130rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .adv-gallery__img {
+    width: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  .adv-gallery__label {
+    background-color: hsl(240, 4%, 95%);
+    padding:  2rem;
+  }
+  
+  .adv-gallery__label-line {
+    display: none;
+  }
+  
+  .adv-gallery__label-text {
+    font-size: 1.375rem;
+    text-align: left;
+  }
+  
+  @media (min-width: 64rem) {
+    .adv-gallery__grid {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  
+    .adv-gallery__grid > :nth-child(1) {
+      grid-column: span 5;
+    }
+  
+    .adv-gallery__grid > :nth-child(2) {
+      grid-column: span 7;
+    }
+  
+    .adv-gallery__grid > :nth-child(3) {
+      grid-column: span 9;
+    }
+  
+    .adv-gallery__grid > :nth-child(4) {
+      grid-column: span 3;
+    }
+  }
+  
+  @media (min-width: 85.5rem) {
+    .adv-gallery__grid {
+      gap: 1.5rem;
+      grid-template-rows: repeat(12, 50px);
+    }
+  
+    .adv-gallery__grid > :nth-child(1) {
+      grid-column: 1/4;
+      grid-row: 1/7;
+    }
+  
+    .adv-gallery__grid > :nth-child(2) {
+      grid-column: 1/4;
+      grid-row: 7/-1;
+    }
+  
+    .adv-gallery__grid > :nth-child(3) {
+      grid-column: 4/11;
+      grid-row: 1/-1;
+    }
+  
+    .adv-gallery__grid > :nth-child(4) {
+      grid-column: 11/13;
+      grid-row: 1/-1;
+    }
+  
+    .adv-gallery__img {
+      height: 100%;
+    }
+  
+    .adv-gallery__label {
+      display: flex;
+    }
+  
+    .adv-gallery__label-inner {
+      margin-top: auto;
+    }
+  
+    .adv-gallery__label-line {
+      display: block;
+      border-left: 1px solid hsl(230, 7%, 23%);
+      height: 96px;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  /* ---------Utilities--------- */
+  
+  .cd-padding-y-xl {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+/* Estilos de los talleres */
+
+.sub-header-talleres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    margin-top: 20px;
+    color: white;
+    background: linear-gradient(135deg, rgba(152, 202, 152, 0.9), rgba(31, 157, 31, 0.7));
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px 20px 20px 20px;
+    margin: 20px 20px 20px 20px;
+    
+}
+
+h2.sub-header-talleres {
+    font-size: 1.7rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+}
+
+.talleres-section {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--bg-container);
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.talleres-grid {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem;
+    margin-top: 20px;
+    color: white;
+    background: linear-gradient(135deg, rgba(98, 162, 98, 0.9), rgba(31, 157, 31, 0.7));
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px 20px 20px 20px;
+    margin: 20px 20px 20px 20px;
+    max-width: 40%;
+}
+
+.text-card {
+    font-size: 1rem;
+    margin: auto;
+}
+
+.inscripcion-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #353635; /* O el color principal de tu marca */
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight:300;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button.inscripcion-btn:hover {
+    background-color: #5d5d5d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.taller-img {
+    border-radius: 100%;
+    margin-top: 20px;
+
+}
+
+/* Estilos de la sección de proyectos */
+
+.proyectos-landing-titulo {
+    font-size: var(--font-size-h2);
+    color:#2a2929;
+    margin-bottom: 2rem;
+    font-family: var(--font-primary);
+    padding-left: 9rem;
+}
+
+.cd-icon {
+    --size: 1em;
+    font-size: var(--size);
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+    color: inherit;
+    fill: currentColor;
+    line-height: 1;
+    flex-shrink: 0;
+    max-width: initial;
+  }
+  
+  .cd-icon use { /* SVG symbols - enable icon color corrections */
+    color: inherit;
+    fill: currentColor;
+  }
+  
+  /* -------------- Component----------------- */
+  
+  .feature-v6 {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .feature-v6__grid {
+    display: grid;
+    gap: 3rem;
+  }
+  
+  .feature-v6__grid > * {
+    min-width: 0;
+  }
+  
+  .feature-v6__img {
+    width: 100%;
+    border-radius: 0.375em;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-v6__icon-wrapper {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px hsla(230, 13%, 9%, 0.05);
+    background-color: hsl(0, 0%, 100%);
+    margin-bottom: 1rem;
+  }
+  
+  .feature-v6__icon {
+    --size: 24px;
+    color: hsl(250, 84%, 54%);
+  }
+  
+  .feature-v6__description {
+    color: hsl(225, 4%, 47%);
+    line-height: 1.58;
+  }
+  
+  @media (min-width: 64rem) {
+    .feature-v6__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* --------Utilities-------------- */
+  
+  .cd-margin-x-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cd-margin-bottom-2xs {
+    margin-bottom: 0.75rem;
+  }
+  
+  .cd-margin-bottom-xs {
+    margin-bottom: 1rem;
+  }
+  
+  .cd-padding-y-xl {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+  
+  .cd-container {
+    width: calc(100% - 3rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cd-max-width-adaptive-lg {
+    max-width: 32rem;
+  }
+  
+  @media (min-width: 64rem) {
+    .cd-max-width-adaptive-lg {
+      max-width: 64rem;
+    }
+  }
+  
+  @media (min-width: 85.5rem) {
+    .cd-max-width-adaptive-lg {
+      max-width: 80rem;
+    }
+  }
+  
+  .cd-link {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: var(--font-size-p);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-primary);
+    text-decoration: none;
+  }
+  
+  .cd-link:hover {
+    background-color: var(--color-primary-dark);
+
+  }
+  
+  .cd-text-center {
+    text-align: center;
+  }
+
+
+
+/* Estilos cta-newsletter */
+
+.cta-newsletter {
+    display: flex; /* Coloca las secciones una al lado de la otra */
+    justify-content: space-between; /* Espacio uniforme entre las secciones */
+    align-items: stretch; /* Asegura que ambas secciones tengan la misma altura */
+    gap: 2rem; /* Espacio entre las secciones */
+    margin: 2rem auto; /* Centra el contenedor */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    max-height: fit-content;
+}
+
+/* Estilos de la sección de suscripción a newsletter */
+
+.newsletter-section {
+    flex: 1;
+    background-color: var(--bg-container);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative
+}
+
+.newsletter-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.newsletter-text {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.newsletter-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem;
+    font-size: var(--font-size-p);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    outline: none;
+    font-family: var(--font-primary);
+}
+
+.newsletter-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 5px rgba(50, 145, 50, 0.5);
+}
+
+.newsletter-button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: var(--font-size-p);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-primary);
+    position: absolute;
+    bottom: 20px;
+}
+
+.newsletter-button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Estilos del CTA*/
+
+.cta-section {
+    flex: 1;
+    background-color: var(--bg-container);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Estilos de secciones específicas */
+
+div.worskhop-item {
+    background-color: rgba(81, 187, 81, 0.5);
+    border-radius: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 8rem;
+    margin: 4rem auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.description {
+    flex: 1;
+    padding: 0 2rem;
+    max-width: 70%;
+    margin-top: 1rem;
+}
+
+.description p {
+    margin: 0;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.circle-image {
+    min-width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cta-text {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.cta-sub-text{
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    text-align: center;
+    align-items: center;
+    padding: 0 0 0 0 ;
+    margin: 20px 5px 20px 5px;
+}
+
+.cta-features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+}
+
+.fa-heart {
+  font-size: 2.5rem;
+  color: #4CAF50; /* O el color principal de tu marca */
+  margin-bottom: 15px;
+
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #4CAF50; /* O el color principal de tu marca */
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #666;
+}
+
+.cta-button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: var(--font-size-p);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-primary);
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
+}
+
+.cta-button:hover {
+    background-color: var(--color-primary-dark);
+}
