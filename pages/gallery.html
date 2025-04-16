@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestigium</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/gallery-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="/assets/componentes/navbar.css">
+    <link rel="stylesheet" href="/assets/componentes/footer.css">
+    <script src="/assets/js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&family=Montserrat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
+</head>
+<body>
+    <!-- Sección del navbar -->
+    <!-- Encabezado con el título y la descripción -->
+    <header class="header-content-gallery" style="background-image: url('/assets/img/gallery/gallery-header.jpg');">
+        <div class="header-content">
+            <h1 class="h1-main">Time to</h1>
+            <h1 class="h1-main2">Explore</h1>
+        </div>
+    </header>
+    <!-- Sección para el contenido del encabezado adicional en verde -->
+    <section class="sub-header">
+        <div class="sub-header-content">
+            <h2 class="sub-header">Vestigium in every shared experience</h2>
+        </div>
+    </section>
+    <!-- Sección del galeria estatica -->
+  <section class="adv-gallery cd-padding-y-xl">
+      <div class="adv-gallery__grid">
+        <div>
+          <img class="adv-gallery__img" src="/assets/img/gallery/VOW6.jpg" alt="Image description">
+        </div>
+    
+        <div>
+          <img class="adv-gallery__img" src="/assets/img/gallery/IMG2.jpg" alt="Image description">
+        </div>
+    
+        <div>
+          <img class="adv-gallery__img" src="/assets/img/gallery/IMG3.jpg" alt="Image description">
+        </div>
+    
+        <div class="adv-gallery__label">
+          <div class="adv-gallery__label-inner">
+            <div class="adv-gallery__label-line" aria-hidden="true"></div>
+            <p class="adv-gallery__label-text">"“When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence."</p>
+            <h3><strong>Ansel Adams</strong></h3>
+          </div>
+        </div>
+      </div>
+  </section>
+    <!-- Galería de imágenes circulares con descripción alternada -->
+  <section class="gallery">
+        <!-- Primer item: imagen izquierda, texto derecha -->
+          <div class="gallery-item" onclick="openCarousel(0)">
+            <div class="image-container">
+                <div class="circle-image">
+                    <img src="/assets/img/gallery/green market/green-market.jpg" alt="Products Image 1">
+                </div>
+            </div>
+            <div class="description">
+                <h3><i class="fa-solid fa-seedling"></i> Green Market</h3>
+                <p class="description-1">Vestigium’s Green Market is a gathering place for those seeking fresh, local, and sustainable products. Here, small producers and artisans offer organic food, and handmade goods, promoting conscious consumption that respects the environment and supports the local economy.</p>
+            </div>
+            <div class="camera-icon">
+                <i class="fas fa-camera"></i>
+            </div>
+          </div>
+    </section>
+    <!-- Segundo sector de galeria estatica -->
+    <ul class="grid-auto-md">
+      <li><img class="cd-block cd-width-100%" src="/assets/img/gallery/florero1.jpg" alt="placeholder"></li>
+      <li><img class="cd-block cd-width-100%" src="/assets/img/gallery/florero2.jpg" alt="placeholder"></li>
+      <li><img class="cd-block cd-width-100%" src="/assets/img/gallery/florero3.jpg" alt="placeholder"></li>
+    </ul>
+    <!-- Segundo item: texto izquierda, imagen derecha -->
+    <div class="gallery-item reverse" onclick="openCarousel(1)">
+      <div class="image-container" >
+          <div class="circle-image">
+              <img src="/assets/img/gallery/bordado0.jpg" alt="Products Image 2">
+          </div>
+      </div>
+      <div class="description">
+          <h3>What is a workshop?</h3>
+          <p>A workshop without the people who bring it to life is empty space: tools without a mission, ideas without voice, potential without expression. It's a container for energy waiting to be sparked—a space waiting to be brought alive by curiosity, imagination, and human contact.</p>
+      </div>
+      <div class="camera-icon">
+          <i class="fas fa-camera"></i>
+      </div>
+    </div>
+    <ul class="grid-auto-md">
+      <li><img class="cd-block cd-width-100%" src="/assets/img/gallery/bordado1.jpg" alt="placeholder"></li>
+      <li><img class="cd-block cd-width-100%" src="/assets/img/gallery/bordado2.jpg" alt="placeholder"></li>
+      <li><img class="cd-block cd-width-100%" src="/assets/img/gallery/bordado3.jpg" alt="placeholder"></li>
+    </ul>
+    <!-- Tercer item: imagen derecha, texto izquierda -->
+    <div class="gallery-item" onclick="openCarousel(2)">
+        <div class="image-container">
+            <div class="circle-image">
+                <img src="img/our-values.jpg" alt="Products Image 3">
+            </div>
+        </div>
+        <div class="description">
+            <h3 class="h3-izquierda">Our Values</h3>
+            <p>We uphold respect for diversity and individuality, encouraging open communication and mutual understanding. Supporting local talent and traditions is key to our ethos, as is fostering personal growth through educational opportunities. Environmental care and ethical practices guide our actions, while creating a culture of trust and empathy ensures the well-being of all members of the community.</p>
+        </div>
+        <div class="camera-icon">
+            <i class="fas fa-camera"></i>
+        </div>
+    </div>
+    </section>
+    <!-- Contenedor del carrusel -->
+    <div id="carousel-container" class="carousel-container">
+        <div class="carousel-content">
+            <span class="close" onclick="closeCarousel()">&times;</span>
+            <div id="carousel-slides" class="carousel-slides">
+                <!-- Las imágenes del carrusel se generarán dinámicamente aquí -->
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            <div class="caption-container">
+                <p id="caption">1/40</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <script src="/assets/js/gallery.js"></script>
+</body>
+</html>
+
